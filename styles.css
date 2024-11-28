@@ -1,0 +1,446 @@
+/* Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Corps de la page */
+body {
+    background-color: #121212; /* Fond sombre */
+    color: #e0e0e0; /* Texte clair */
+    line-height: 1.6;
+}
+
+/* Style de base pour le menu */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+nav .nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav .nav-links li {
+    margin: 0 1rem;
+}
+
+nav .nav-links li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links li a:hover {
+    color: #00bcd4; /* Couleur futuriste */
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.6); /* Effet lumineux */
+}
+
+/* Style du menu hamburger pour les petits écrans */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 25px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 4px;
+    width: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    /* Cacher les liens de navigation classiques sur petit écran */
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        padding: 1rem 0;
+        border-top: 2px solid #00bcd4;
+        text-shadow: 0 0 10px rgba(0, 188, 212, 0.6); /* Effet lumineux */
+    }
+
+    nav .nav-links.active {
+        display: flex;
+    }
+
+    /* Afficher le menu hamburger uniquement sur mobile */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Style des liens du menu hamburger */
+    nav .nav-links li {
+        margin: 1rem 0;
+    }
+
+    nav .nav-links li a {
+        font-size: 1.2rem;
+        color: #00bcd4;
+        text-shadow: 0 0 10px rgba(0, 188, 212, 0.6); /* Effet lumineux */
+    }
+
+    nav .nav-links li a:hover {
+        color: #fff; /* Changement de couleur au survol */
+    }
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Section Accueil */
+#accueil {
+    position: relative;
+    height: 100vh; /* La section occupe toute la hauteur de la fenêtre */
+    color: #fff; /* Texte clair pour le contraste */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Image Parallax */
+.parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* L'image couvre toute la section */
+    background-image: url('assets/img/parallax3.webp'); /* Remplacez par votre image */
+    background-position: center;
+    background-attachment: fixed; /* Le fond ne défile pas avec la page */
+    background-size: cover; /* L'image couvre toute la section sans déformation */
+    z-index: -1; /* L'image est en arrière-plan */
+}
+
+/* Style du texte dans la section */
+#accueil h1 {
+    font-size: 3rem;
+    margin-top: 20%;
+}
+
+#accueil p {
+    font-size: 1.2rem;
+}
+
+/* Section À propos */
+#apropos {
+    background-color: #232323;
+    color: #bbb;
+    padding: 60px 20px;
+}
+
+#apropos h2 {
+    font-size: 2.5rem;
+    color: #00bcd4; /* Couleur futuriste */;
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.6); /* Effet lumineux */
+    margin-bottom: 1rem;
+}
+
+#apropos p {
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Section Projets */
+#projets {
+    background: #181818;
+    color: #fff;
+    padding: 60px 20px;
+}
+
+#projets h2 {
+    font-size: 2.5rem;
+    color: #00bcd4;
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.6); /* Effet lumineux */
+    margin-bottom: 2rem;
+}
+
+.project {
+    margin: 2rem 0;
+}
+
+.project h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00bcd4; /* Couleur futuriste */;
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.6); /* Effet lumineux */
+}
+
+.project p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Style du bouton "Voir le projet" */
+a.btn-projet {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #00bcd4; /* Couleur bleu futuriste */
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.6); /* Effet lumineux */
+    color: #fff; /* Texte blanc */
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    border-radius: 50px; /* Bordures arrondies */
+    position: relative;
+    transition: all 0.3s ease; /* Transition fluide */
+}
+
+a.btn-projet::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #00bcd4, #ff4081, #6200ea);
+    background-size: 400% 400%;
+    border-radius: 50px;
+    z-index: -1;
+    animation: moveBackground 4s ease infinite;
+}
+
+a.btn-projet:hover {
+    background-color: transparent; /* Fond transparent au survol */
+    color: #00bcd4; /* Texte en bleu au survol */
+    border-color: #00bcd4; /* Bordure bleue au survol */
+    transform: translateY(-5px); /* Effet de décalage au survol */
+}
+
+a.btn-projet:active {
+    transform: translateY(2px); /* Effet de pression */
+}
+
+/* Animation de mouvement du fond du bouton */
+@keyframes moveBackground {
+    0% {
+        background-position: 100% 50%;
+    }
+    50% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;  
+    }
+}
+
+/* Styles du carrousel */
+.carousel {
+    position: relative;
+    max-width: 800px; /* Largeur maximale du carrousel */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none; /* Cache les éléments par défaut */
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Taille des images */
+    margin: 20px 0;
+}
+
+/* Flèches de navigation */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Section Compétences */
+#competences {
+    background: #1a1a1a;
+    color: #ddd;
+    padding: 60px 20px;
+}
+
+#competences h2 {
+    font-size: 2.5rem;
+    color: #00bcd4; /* Couleur futuriste */;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.6); /* Effet lumineux */
+}
+
+#competences ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style-type: none;
+}
+
+#competences ul li {
+    background-color: #333;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #e0e0e0;
+    transition: background-color 0.3s ease;
+}
+
+#competences ul li:hover {
+    background-color: #00bcd4;
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.6); /* Effet lumineux */
+}       
+
+/* Section Contact */
+#contact {
+    background-color: #121212; /* Fond sombre */
+    color: #e0e0e0; /* Texte clair pour un bon contraste */
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin: 50px auto;
+    max-width: 600px;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #00bcd4; /* Couleur futuriste */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.6); /* Effet lumineux */
+}
+
+#contact p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact ul li {
+    font-size: 1.1rem;
+    margin: 15px 0;
+}
+
+#contact a {
+    color: #00bcd4; /* Couleur futuriste */
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Effet de hover sur les liens */
+#contact a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #00bcd4;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+#contact a:hover {
+    color: #ffffff; /* Changer la couleur du texte au survol */
+}
+
+#contact a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Animation de l'élément au survol */
+#contact a:hover {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.9); /* Ajouter un effet lumineux */
+}
+
+/* Mobile-friendly */
+@media screen and (max-width: 768px) {
+    #contact h2 {
+        font-size: 2rem;
+    }
+
+    #contact p {
+        font-size: 1rem;
+    }
+
+    #contact ul li {
+        font-size: 1rem;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #bbb;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    #plateau {
+        width: 90%; /* Réduit la taille du plateau sur les écrans plus petits */
+    }
+
+    nav ul {
+        flex-direction: column; /* Empile les éléments du menu */
+    }
+}

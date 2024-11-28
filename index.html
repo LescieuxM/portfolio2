@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Menu de navigation -->
+    <nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+
+    <section id="accueil">
+        <div class="parallax"></div>
+        <h1>Bienvenue sur mon Portfolio</h1>
+        <p>Je suis un développeur web passionné, spécialisé dans la création d'applications web et l'innovation numérique.</p>
+    </section>    
+
+    <!-- Section À propos -->
+    <section id="apropos">
+        <h2>À propos de moi</h2>
+        <p>Je m'appelle Mathilde, je suis développeuse web en herbe, spécialisée dans le front-end, avec une appétence pour le back-end. Mon parcours est fait de passion pour le développement, de persévérance et d'une soif constante d'apprendre.</p>
+        <p>J'ai développé des compétences solides en HTML, CSS, JavaScript, PHP, quelques notions en Python et en Ruby et je suis prête à relever de nouveaux défis dans le monde du développement web.</p>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets">
+        <h2>Mes Projets</h2>
+        
+        <!-- Carrousel -->
+        <div class="carousel">
+            <div class="carousel-item">
+                <h3>Projet 1 - Run'Zik</h3>
+                <img src="assets/img/runzik.png" alt="accueil du site web runzik">
+                <p>Un projet réalisé avec HTML, CSS, et JavaScript.</p>
+                <a href="https://ellwye.frama.io/run-zik/produits.html" target="_blank" class="btn-projet">Voir le projet</a>
+            </div>
+            <div class="carousel-item">
+                <h3>Projet 2 - Serv'Drone</h3>
+                <img src="assets/img/servdrone.png" alt="accueil du site web servdrone">
+                <p>Un projet créé avec HTML, CSS, et JavaScript.</p>
+                <a href="https://fannyrouyer.fr/servdrone/" target="_blank" class="btn-projet">Voir le projet</a>
+            </div>
+            <div class="carousel-item">
+                <h3>Projet 3 - GameZone</h3>
+                <img src="assets/img/gamezone.png" alt="accueil du site web gamezone">
+                <p>Un projet créé avec HTML, CSS, et JavaScript.</p>
+                <a href="https://fannyrouyer.fr/gamezone/index.php?page=attractions" target="_blank" class="btn-projet">Voir le projet</a>
+            </div>
+            <div class="carousel-item">
+                <h3>Projet 4 - Jeu de cartes mémoires</h3>
+                <img src="assets/img/memory.png" alt="accueil du site jeu des cartes mémoires">
+                <p>Un projet créé avec HTML, CSS, et JavaScript.</p>
+                <a href="https://github.com/LescieuxM/memory" target="_blank" class="btn-projet">Voir le projet</a>
+            </div>
+    
+            <!-- Flèches de navigation -->
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>    
+
+    <!-- Section Compétences -->
+    <section id="competences">
+        <h2>Mes Compétences</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+            <li>Git</li>
+            <li>Gestion de projet</li>
+            <li>Travail d'équipes</li>
+        </ul>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Vous pouvez me contacter via les moyens suivants :</p>
+        <ul>
+            <li>Email : <a href="mailto:mathilde.lescieux@gmail.com">mathilde.lescieux@gmail.com</a></li>
+            <li>GitHub : <a href="https://github.com/LescieuxM" target="_blank">Mon GitHub</a></li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Mathilde - Tous droits réservés</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
